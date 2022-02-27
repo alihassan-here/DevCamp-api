@@ -12,16 +12,20 @@ connecDB();
 
 
 //Route Files
-const bootcamps = require('./routes/bootcamps');
+const bootcamp = require('./routes/bootcamp');
 
 const app = express();
+
+//Body Parser
+app.use(express.json());
+
 //Dev logging middleware
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
 
 //Mount Routes
-app.use('/api/v1/bootcamps', bootcamps);
+app.use('/api/v1/bootcamps', bootcamp);
 
 
 const PORT = process.env.PORT || 5000;
