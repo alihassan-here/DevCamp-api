@@ -13,7 +13,7 @@ connecDB();
 
 
 //Route Files
-const bootcamp = require('./routes/bootcamp');
+const bootcamps = require('./routes/bootcamps');
 
 const app = express();
 
@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 //Mount Routes
-app.use('/api/v1/bootcamps', bootcamp);
+app.use('/api/v1/bootcamps', bootcamps);
 
 app.use(errorHandler);
 
