@@ -134,6 +134,7 @@ exports.deleteBootcamp = asyncHandler(async (req, res, next) => {
 // @desc    Get bootcamps within a radius
 // @route   GET api/v1/bootcamp/radius/:zipcode/:distance
 // @access  Private
+
 exports.getBootcampsInRadius = asyncHandler(async (req, res, next) => {
     const { zipcode, distance } = req.params;
 
