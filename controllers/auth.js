@@ -7,5 +7,5 @@ const asyncHandler = require('../middleware/async');
 //@route POST /api/v1/auth/register
 //@access Public
 exports.register = asyncHandler(async (req, res, next) => {
-    res.status.json({ success: true });
+    res.status(200).json({ success: true });
 });
